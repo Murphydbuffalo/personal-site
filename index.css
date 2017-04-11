@@ -1,0 +1,127 @@
+html {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+.main-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #cc4b48;
+}
+
+.headshot {
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px;
+}
+
+header {
+  background-color: rgba(50,50,50,0.60);
+  color: white;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+header a:link {
+  color: white;
+}
+
+header a:visited {
+  color: white;
+}
+
+header a:hover {
+  color: #cc4b48;
+}
+
+header nav, header div {
+  flex: 1 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+nav ul li {
+  flex 1 auto;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.header-spacer {
+  width: 100%;
+  min-height: 150px;
+}
+
+.section-flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+}
+
+.section-flex-container .content, .section-flex-container img, .section-flex-container svg {
+  flex: 1 auto;
+}
+
+.section-flex-container .content {
+  order: 1;
+  max-width: 50%;
+}
+
+.section-flex-container img, .section-flex-container svg {
+  max-width: 200px;
+  max-height: 200px;
+  order: 2;
+}
+
+.about {
+  order: 1;
+}
+
+.recommendations {
+  order: 2;
+}
+
+.work {
+  order: 3;
+}
+
+.blog {
+  order: 4;
+}
+
+.talks {
+  order: 5;
+}
+
+.certificates {
+  order: 6;
+}
