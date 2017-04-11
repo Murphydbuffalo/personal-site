@@ -1,18 +1,13 @@
 html {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 body {
   width: 100%;
 }
 
-.main-flex-container {
-  display: flex;
-  flex-direction: column;
-}
-
-ul {
-  list-style-type: none;
+.quote {
+  font-family: 'Architects Daughter', cursive;
 }
 
 a:link {
@@ -24,7 +19,8 @@ a:visited {
 }
 
 a:hover {
-  color: #cc4b48;
+  color: #CC4B48;
+  cursor: pointer;
 }
 
 .headshot {
@@ -33,15 +29,15 @@ a:hover {
 }
 
 header {
-  background-color: rgba(50,50,50,0.60);
+  display: none;
+  background-color: #CC4B48;
   color: white;
   top: 0px;
   left: 0px;
   position: fixed;
   width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  z-index: 1000;
+  min-height: 100px;
 }
 
 header a:link {
@@ -53,51 +49,34 @@ header a:visited {
 }
 
 header a:hover {
-  color: #cc4b48;
+  color: black;
 }
 
-header nav, header div {
-  flex: 1 auto;
+header span {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-nav ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-}
-
-nav ul li {
-  flex 1 auto;
-  margin-left: 6px;
-  margin-right: 6px;
-}
-
-.header-spacer {
+.spacer {
   width: 100%;
-  min-height: 150px;
+  height: 100px;
 }
 
-.section-flex-container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+.about img {
+  margin-top: 33%;
 }
 
-section {
-  width: 100%;
+.jeremiah img {
+  margin-top: 15%;
 }
 
-.section-flex-container .content, .section-flex-container img, .section-flex-container svg {
-  flex: 1 auto;
+.matt img {
+  margin-top: 5%;
 }
 
-.section-flex-container .content {
-  order: 1;
-  max-width: 50%;
+.headshot {
+  margin-left: 15%;
 }
-
-.section-flex-container img, .section-flex-container svg {
-  max-width: 200px;
-  max-height: 200px;
-  order: 2;
+.recommendation {
+  margin-bottom: 7%;
 }
