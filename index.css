@@ -101,27 +101,3 @@ section {
   max-height: 200px;
   order: 2;
 }
-
-.about {
-  order: 1;
-}
-
-.recommendations {
-  order: 2;
-}
-
-.work {
-  order: 3;
-}
-
-.blog {
-  order: 4;
-}
-
-.talks {
-  order: 5;
-}
-
-.certificates {
-  order: 6;
-}
