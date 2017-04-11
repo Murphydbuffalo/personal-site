@@ -76,7 +76,13 @@ header span {
 
 .headshot {
   margin-left: 15%;
+  border: 1px solid black;
 }
+
+.headshot:hover {
+  box-shadow: 0px 0px 0px black;
+}
+
 .recommendation {
   margin-bottom: 7%;
 }
