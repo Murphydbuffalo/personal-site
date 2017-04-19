@@ -1,8 +1,5 @@
-html {
-  font-family: 'Droid Sans', sans-serif;
-}
-
 body {
+  font-family: 'Droid Sans', sans-serif;
   width: 100%;
 }
 
@@ -25,76 +22,17 @@ a:hover {
 
 .headshot {
   border-radius: 50%;
-  box-shadow: 0px 0px 1px;
-}
-
-header {
-  display: none;
-  background-color: #CC4B48;
-  color: white;
-  top: 0px;
-  left: 0px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  min-height: 100px;
-}
-
-header a:link {
-  color: white;
-}
-
-header a:visited {
-  color: white;
-}
-
-header a:hover {
-  color: black;
-}
-
-header span {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.spacer {
-  width: 100%;
-  height: 100px;
-}
-
-.about img {
-  margin-top: 33%;
-}
-
-.jeremiah img {
-  margin-top: 15%;
-}
-
-.matt img {
-  margin-top: 5%;
-}
-
-.headshot {
-  margin-left: 15%;
   border: 1px solid black;
+  box-shadow: 0px 0px 1px;
 }
 
 .headshot:hover {
   box-shadow: 0px 0px 0px black;
 }
 
-.logo {
-  margin-left: 15%;
+.spacer {
+  width: 100%;
+  height: 5em;
 }
 
-.raizlabs, .drugdev, .kitewheel {
-  margin-top: 25%;
-}
-
-.onandon {
-  margin-top: 15%;
-}
-
-.subsection {
-  margin-bottom: 7%;
-}
+/* Modal Classes */
