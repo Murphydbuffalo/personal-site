@@ -7,6 +7,12 @@ body {
   font-family: 'Architects Daughter', cursive;
 }
 
+.home {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+}
+
 a:link {
   color: black;
 }
@@ -37,7 +43,7 @@ a:hover {
 
 .big-spacer {
   width: 100%;
-  height: 15em;
+  height: 10em;
 }
 
 .drugdev {
