@@ -1,11 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-
     <title>Dan Murphy - Software Developer in Boston, MA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta content="
       Dan Murphy is a software developer based in Boston, Massachusetts. He atteneded
       the web development bootcamp Launch Academy in 2014 and has worked at Barbershop Labs,
@@ -70,17 +68,16 @@
           fitness company's new in-home workout platform.
         </p>
 
-        <p>
-          Development highlights of this project include:
-          <ul>
-            <li>Performance auditing and optimization of both the application and database layers.</li>
-            <li>Modern (ES6 via Babel) JavaScript written in a modular, functional style.</li>
-            <li>Adding services to, and interfacing with, the client's existing microservices architecture.</li>
-            <li>Excellent integration test coverage written in Mocha, and building on CircleCI.</li>
-            <li>API uptime monitoring with Runscope.</li>
-            <li>Stateless authentication using JSON Web Tokens.</li>
-          </ul>
-        </p>
+        <p>Development highlights of this project include:</p>
+
+        <ul>
+          <li>Performance auditing and optimization of both the application and database layers.</li>
+          <li>Modern (ES6 via Babel) JavaScript written in a modular, functional style.</li>
+          <li>Adding services to, and interfacing with, the client's existing microservices architecture.</li>
+          <li>Excellent integration test coverage written in Mocha, and building on CircleCI.</li>
+          <li>API uptime monitoring with Runscope.</li>
+          <li>Stateless authentication using JSON Web Tokens.</li>
+        </ul>
       </div>
     </div>
 
@@ -89,7 +86,7 @@
     <div class="row" id="drugdev">
       <div class="four columns offset-by-four">
         <a class="logo" href="https://www.drugdev.com/" target="_blank">
-          <img class="drugdev" src="images/drugdev_logo.png"></img>
+          <img alt="The DrugDev logo." class="drugdev" src="images/drugdev_logo.png"/>
         </a>
       </div>
     </div>
@@ -105,28 +102,27 @@
           the new DrugDev application.
         </p>
 
-        <p>
-          Development highlights of this project include:
-          <ul>
-            <li>
-              Enforcing a large and complex set of business rules dictating
-              who should receive these notifications, when they should receive them,
-              and what the recipients should be permitted to do with the letter
-              (read-only, acknowledge receipt, distribute to other users, etc).
-            </li>
+        <p>Development highlights of this project include:</p>
 
-            <li>
-              Crafting a solution that lived inside DrugDev's existing 8+ year
-              old Ruby on Rails codebase, which constrained our choice in what
-              technologies and patterns we could apply.
-            </li>
+        <ul>
+          <li>
+            Enforcing a large and complex set of business rules dictating
+            who should receive these notifications, when they should receive them,
+            and what the recipients should be permitted to do with the letter
+            (read-only, acknowledge receipt, distribute to other users, etc).
+          </li>
 
-            <li>
-              Use of multiple DelayedJob queues to process the incoming legacy
-              data, and import it into the DrugDev database.
-            </li>
-          </ul>
-        </p>
+          <li>
+            Crafting a solution that lived inside DrugDev's existing 8+ year
+            old Ruby on Rails codebase, which constrained our choice in what
+            technologies and patterns we could apply.
+          </li>
+
+          <li>
+            Use of multiple DelayedJob queues to process the incoming legacy
+            data, and import it into the DrugDev database.
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -135,7 +131,7 @@
     <div class="row" id="kitewheel">
       <div class="four columns offset-by-four">
         <a class="logo" href="https://kitewheel.com" target="_blank">
-          <img class="kitewheel" src="images/kitewheel_logo.png"></img>
+          <img alt="The Kitewheel logo." class="kitewheel" src="images/kitewheel_logo.png"/>
         </a>
       </div>
     </div>
@@ -154,24 +150,25 @@
         <p>
           As a junior member of this team I was able to successfully advocate
           for the use of several impactful best practices including:
-          <ul>
-            <li>A robust automated test suite (none existed before my arrival).</li>
-
-            <li>
-              Replacing MongoDB with PostgreSQL as our persistence layer. Our
-              data was not close to approaching the scale required by a noSQL solution,
-              and we benefitted greatly from the consistency guarantees, ability
-              to make ad hoc queries, and transaction support afforded by a SQL solution.
-            </li>
-
-            <li>
-              Use of a security best practices module, Helmet.js, to close gaps
-              in our Node.js server's security features. Unlike a more full-featured
-              web framework such as Rails, our Node and Express.js server was missing
-              key protections such as CSRF tokens, a Content Security Policy,
-              and HSTS.
-          </ul>
         </p>
+
+        <ul>
+          <li>A robust automated test suite (none existed before my arrival).</li>
+
+          <li>
+            Replacing MongoDB with PostgreSQL as our persistence layer. Our
+            data was not close to approaching the scale required by a noSQL solution,
+            and we benefitted greatly from the consistency guarantees, ability
+            to make ad hoc queries, and transaction support afforded by a SQL solution.
+          </li>
+
+          <li>
+            Use of a security best practices module, Helmet.js, to close gaps
+            in our Node.js server's security features. Unlike a more full-featured
+            web framework such as Rails, our Node and Express.js server was missing
+            key protections such as CSRF tokens, a Content Security Policy,
+            and HSTS.
+        </ul>
       </div>
     </div>
   </body>
