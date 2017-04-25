@@ -38,3 +38,7 @@ a:hover {
 .drugdev {
   margin-top: 0.8em;
 }
+
+.centered-text {
+  text-align: center;
+}
