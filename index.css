@@ -43,11 +43,10 @@ a:hover {
 .headshot {
   border-radius: 50%;
   border: 1px solid black;
-  box-shadow: 0px 0px 1px;
 }
 
 .headshot:hover {
-  box-shadow: 0px 0px 0px black;
+  box-shadow: 0px 0px 1px black;
 }
 
 .spacer {
