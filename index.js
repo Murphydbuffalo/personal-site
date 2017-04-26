@@ -35,6 +35,16 @@ function randomIndex(array) {
 let pause = false;
 let previousColor = null;
 
+function pickNewColor(prevColor) {
+  const newColorIndex = randomIndex(backgroundColors);
+
+  if (backgroundColors[newColorIndex] !== prevColor) {
+    return backgroundColors[newColorIndex];
+  }
+
+  return backgroundColors[newColorIndex + 1] || backgroundColors[newColorIndex - 1];
+}
+
 function animateBackgroundDivColor() {
   if (pause) {
     return;
@@ -49,8 +59,7 @@ function animateBackgroundDivColor() {
     div.style.backgroundColor = '#FFFFFF';
   });
 
-  let newColorIndex = randomIndex(backgroundColors);
-  let newColor = backgroundColors[newColorIndex] !== previousColor ? backgroundColors[newColorIndex] : (backgroundColors[newColorIndex + 1] || backgroundColors[newColorIndex - 1]);
+  const newColor = pickNewColor(previousColor);
   divInViewport.style.backgroundColor = newColor;
   previousColor = newColor;
 }
