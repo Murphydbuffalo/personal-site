@@ -9,7 +9,8 @@ const backgroundColors = [
 const backgroundDivs = document.querySelectorAll('.full-width-background');
 
 function distanceToTop(e) {
-  return e.getBoundingClientRect().top;
+  const { top, bottom } = e.getBoundingClientRect();
+  return (top + bottom) / 2;
 }
 
 function closestToTop(elements) {
@@ -19,7 +20,7 @@ function closestToTop(elements) {
   elements.forEach(function(e, i) {
     let distance = distanceToTop(e);
 
-    if (distance > -10 && distance < minimumNonNegativeDistanceToTop) {
+    if (distance > 0 && distance < minimumNonNegativeDistanceToTop) {
       minimumNonNegativeDistanceToTop = distance;
       index = i;
     }
