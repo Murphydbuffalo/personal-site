@@ -28,20 +28,20 @@ function closestToTop(elements) {
   return elements[index];
 }
 
-function takeRandom(array) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
+function randomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
 
 let pause = false;
+let previousColor = null;
 
-window.addEventListener('scroll', function(e) {
+function animateBackgroundDivColor() {
   if (pause) {
     return;
   }
 
   pause = true;
-  setTimeout(() => { pause = false }, 1500);
+  setTimeout(() => { pause = false }, 1200);
 
   const divInViewport = closestToTop(backgroundDivs);
 
@@ -49,5 +49,13 @@ window.addEventListener('scroll', function(e) {
     div.style.backgroundColor = '#FFFFFF';
   });
 
-  divInViewport.style.backgroundColor = takeRandom(backgroundColors);
-});
+  let newColorIndex = randomIndex(backgroundColors);
+  let newColor = backgroundColors[newColorIndex] !== previousColor ? backgroundColors[newColorIndex] : (backgroundColors[newColorIndex + 1] || backgroundColors[newColorIndex - 1]);
+  divInViewport.style.backgroundColor = newColor;
+  previousColor = newColor;
+}
+
+window.addEventListener('DOMContentLoaded', setTimeout(animateBackgroundDivColor, 500));
+window.addEventListener('scroll', animateBackgroundDivColor);
+window.addEventListener('mousewheel', animateBackgroundDivColor);
+window.addEventListener('MozMousePixelScroll', animateBackgroundDivColor);
