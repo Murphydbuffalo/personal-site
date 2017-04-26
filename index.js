@@ -52,7 +52,7 @@ function animateBackgroundDivColor() {
   }
 
   pause = true;
-  setTimeout(() => { pause = false }, 1200);
+  setTimeout(() => { pause = false }, 1000);
 
   const divInViewport = closestToTop(backgroundDivs);
 
