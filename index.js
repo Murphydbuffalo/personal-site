@@ -19,7 +19,7 @@ function closestToTop(elements) {
   elements.forEach(function(e, i) {
     let distance = distanceToTop(e);
 
-    if (distance > -20 && distance < minimumNonNegativeDistanceToTop) {
+    if (distance > -10 && distance < minimumNonNegativeDistanceToTop) {
       minimumNonNegativeDistanceToTop = distance;
       index = i;
     }
