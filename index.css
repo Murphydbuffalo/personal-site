@@ -1,6 +1,7 @@
 body {
   font-family: 'Droid Sans', sans-serif;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .quote {
@@ -12,6 +13,13 @@ body {
   z-index: 999;
   top: 2em;
   left: 2em;
+}
+
+.full-width-background {
+  z-index: -1;
+  width: 105%;
+  margin-top: -8px;
+  margin-left: -8px;
 }
 
 a:link {
@@ -40,11 +48,6 @@ a:hover {
 .spacer {
   width: 100%;
   height: 5em;
-}
-
-.big-spacer {
-  width: 100%;
-  height: 10em;
 }
 
 .drugdev {
