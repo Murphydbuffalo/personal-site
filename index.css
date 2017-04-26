@@ -16,9 +16,12 @@ body {
 }
 
 .full-width-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: -1;
   width: 105%;
-  min-height: 431px;
+  min-height: 50rem;
   margin-top: -8px;
   margin-left: -8px;
   transition: background-color 1.0s ease;
