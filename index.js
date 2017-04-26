@@ -13,13 +13,13 @@ function distanceToTop(e) {
 }
 
 function closestToTop(elements) {
-  let minimumNonNegativeDistanceToTop = 99999;
+  let minimumNonNegativeDistanceToTop = 9999;
   let index = 0;
 
   elements.forEach(function(e, i) {
     let distance = distanceToTop(e);
 
-    if (distance > -1 && distance < minimumNonNegativeDistanceToTop) {
+    if (distance > -20 && distance < minimumNonNegativeDistanceToTop) {
       minimumNonNegativeDistanceToTop = distance;
       index = i;
     }
