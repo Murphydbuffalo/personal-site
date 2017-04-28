@@ -21,7 +21,7 @@ body {
   z-index: -1;
   width: 100%;
   min-height: 50rem;
-  padding: 4em 0;
+  padding: 2em 0;
   transition: background-color 1.0s ease;
 }
 
