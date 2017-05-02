@@ -39,6 +39,8 @@ and performance insights. You can have people beta test the site from ngrok if y
 
 + Add a README describing how the site was developed and how it's hosted (and why).
 
++ Set up TLS (important for SEO).
+
 + Double check everything and ask your friends and fam to do so as well.
   - Responsive design for large monitor/desktop, laptop, large tablet, small tablet,
   phablet, and mobile.
