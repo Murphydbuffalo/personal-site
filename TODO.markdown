@@ -51,3 +51,5 @@ and performance insights. You can have people beta test the site from ngrok if y
   - SEO (should be first page for all keywords).
 
 + Host on AWS S3 and CloudFront! All static everything.
+
++ Clean up git history.
