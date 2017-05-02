@@ -20,6 +20,10 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  /* TODO: padding around 3 column sections on index.html */
+}
+
 @media (max-width: 560px) {
   .home {
     top: 0.5em;
