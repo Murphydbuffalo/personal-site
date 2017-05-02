@@ -14,12 +14,42 @@ body {
   left: 2em;
 }
 
+@media (max-width: 1024px) {
+  #cryptography img, #machine-learning img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .home {
+    top: 0.5em;
+    left: 0.5em;
+  }
+
+  .home img {
+    max-width: 20px;
+  }
+
+  .columns {
+    margin-bottom: 1em;
+  }
+
+  .talks img, #cryptography img, #machine-learning img {
+    width: 90%;
+  }
+
+  .padding-when-mobile {
+    padding: 0 2em;
+  }
+}
+
 .full-width-background {
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: -1;
   width: 100%;
+  max-width: 100%;
   min-height: 50rem;
   padding: 2em 0;
   transition: background-color 1.0s ease;
