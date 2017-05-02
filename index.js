@@ -78,7 +78,6 @@ function registerLinkEventHandlers() {
   newPageLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      console.log('inside event listener, default behavior prevented');
 
       return fetch(`/${link.dataset.page}.html`)
         .then(res => res.text())
