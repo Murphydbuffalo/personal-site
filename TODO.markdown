@@ -28,3 +28,8 @@ Eg, you want `/about` and not `/about.html`.
 
 8. Consolidate shared HTML into a layout. Use some kind of HTML generator? Or native
 HTML5 `<template>` tags? Should we use AJAX to fetch the non-index pages?
+
+9. Resize images as needed, optimize them with `imageoptim`, and specify their
+actual dimensions in the HTML `img` tag (not in CSS when possible).
+
+10. Review and revise all copy.
