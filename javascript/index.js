@@ -81,22 +81,4 @@ function backgroundColorAnimation() {
   window.addEventListener('keydown', handleArrowKeyPress(animateBackgroundDivColor));
 }
 
-function registerLinkEventHandlers() {
-  document.querySelectorAll('.new-page').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      return fetch(`/${link.dataset.page}.html`)
-        .then(res => res.text())
-        .then(function(html) {
-          document.querySelector('main').innerHTML = html;
-          backgroundColorAnimation();
-          registerLinkEventHandlers();
-        })
-        .catch(e => console.error(e.message));
-    });
-  });
-}
-
 backgroundColorAnimation();
-registerLinkEventHandlers();

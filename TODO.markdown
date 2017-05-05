@@ -12,18 +12,11 @@ Eg, you want `/about` and not `/about.html`.~~
 + ~~Consolidate shared HTML into a layout. Use some kind of HTML generator? Or native
 HTML5 `<template>` tags? Should we use AJAX to fetch the non-index pages?~~
 
-+ Scroll to appropriate point on page for each AJAX link.
-
-+ Handle browser navigation stack (aka don't break the browser's back and forward buttons!)
-
-+ Performance optimization - Minify, concatenate, gzip compression, run Google
++ ~~Performance optimization - Minify, concatenate, gzip compression, run Google
 PageSpeed insights. Resize images as needed, optimize them with `imageoptim`, and specify their
-actual dimensions in the HTML `img` tag (not in CSS when possible).
+actual dimensions in the HTML `img` tag (not in CSS when possible).~~
 
 + Review and revise all copy.
-
-+ Add polyfill for bleeding edge features like `fetch` and `replaceChild`. Can test
-IE with [browserling](https://www.browserling.com/).
 
 + SEO - ~~Figure out what terms you want to optimize for; probably "Dan Murphy
 developer", "Dan Murphy ruby", "Dan Murphy elixir", "Dan Murphy javascript",
