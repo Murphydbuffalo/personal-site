@@ -66,9 +66,20 @@ function backgroundColorAnimation() {
     previousColor = newColor;
   }
 
+  const ARROW_KEY_CODES = [38, 40];
+
+  function handleArrowKeyPress(fn) {
+    return function(e) {
+      if (ARROW_KEY_CODES.includes(e.which)) {
+        fn();
+      }
+    }
+  }
+
   window.addEventListener('DOMContentLoaded', setTimeout(animateBackgroundDivColor, 500));
   window.addEventListener('mousewheel', animateBackgroundDivColor);
   window.addEventListener('MozMousePixelScroll', animateBackgroundDivColor);
+  window.addEventListener('keydown', handleArrowKeyPress(animateBackgroundDivColor));
 }
 
 backgroundColorAnimation();
