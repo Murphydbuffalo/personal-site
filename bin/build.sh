@@ -25,5 +25,5 @@ done
 # We make separate calls to `uglify` and `minify` (which is just a wrapper library
 # that can call `uglify` if you want), because we are using the `harmony` branch
 # of `uglify`. This allows us to minify ES6 JavaScript.
-uglifyjs ./javascript/index.js -o ./build/index.min.js
+uglifyjs ./javascript/index.js --compress --mangle toplevel --output ./build/index.min.js 
 minify --output ./build/index.min.css ./css/normalize.css ./css/skeleton.css ./css/index.css
