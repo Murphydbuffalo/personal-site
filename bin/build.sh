@@ -29,4 +29,14 @@ uglifyjs ./javascript/index.js --compress --mangle toplevel --output ./build/ind
 minify --output ./build/index.min.css ./css/normalize.css ./css/skeleton.css ./css/index.css
 
 # gzip non-binary format files
+echo "Gziping text files..."
 gzip -9 ./build/*.html ./build/*.css ./build/*.js
+
+# Remove .gz file extensions
+ZIPPED_FILES=./build/*.gz
+for z in $ZIPPED_FILES
+do
+  mv $z `echo $z | sed "s/\.gz//"`
+done
+
+echo "Shucky ducky."
