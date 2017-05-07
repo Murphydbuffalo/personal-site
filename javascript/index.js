@@ -78,6 +78,7 @@ function backgroundColorAnimation() {
   window.addEventListener('DOMContentLoaded', setTimeout(animateBackgroundDivColor, 500));
   window.addEventListener('mousewheel', animateBackgroundDivColor);
   window.addEventListener('MozMousePixelScroll', animateBackgroundDivColor);
+  window.addEventListener('touchmove', animateBackgroundDivColor);
   window.addEventListener('keydown', handleArrowKeyPress(animateBackgroundDivColor));
 }
 
