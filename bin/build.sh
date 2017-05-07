@@ -39,6 +39,7 @@ do
   echo "Building $FILE"
   cat ./template_with_manifests.html > ./build/"$FILE"
   cat $v >> ./build/"$FILE"
+  cat ./google-analytics.txt >> ./build/"$FILE"
   echo "\t</body>\n</html>\n" >> ./build/"$FILE"
 done
 
