@@ -1,8 +1,6 @@
 #!/bin/sh
 
-rm -rf ./build
-mkdir ./build
-
+rm -rf ./build/*
 cp ./favicons/* ./build
 mkdir ./build/images
 cp -R ./images ./build
@@ -28,15 +26,19 @@ done
 uglifyjs ./javascript/index.js --compress --mangle toplevel --output ./build/index.min.js
 minify --output ./build/index.min.css ./css/normalize.css ./css/skeleton.css ./css/index.css
 
-# gzip non-binary format files
-echo "Gziping text files..."
-gzip -9 ./build/*.html ./build/*.css ./build/*.js
+if [ -z "$1" ]
+then
+  # gzip non-binary format files
+  echo "Gziping text files..."
 
-# Remove .gz file extensions
-ZIPPED_FILES=./build/*.gz
-for z in $ZIPPED_FILES
-do
-  mv $z `echo $z | sed "s/\.gz//"`
-done
+  gzip -9 ./build/*.html ./build/*.css ./build/*.js
+
+  # Remove .gz file extensions
+  ZIPPED_FILES=./build/*.gz
+  for z in $ZIPPED_FILES
+  do
+    mv $z `echo $z | sed "s/\.gz//"`
+  done
+fi
 
 echo "Shucky ducky."
