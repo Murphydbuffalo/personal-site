@@ -15,14 +15,17 @@ function closestToTop(elements) {
   let minimumNonNegativeDistanceToTop = 9999;
   let index = 0;
 
-  elements.forEach(function(e, i) {
-    let distance = distanceToTop(e);
+  const length = elements.length;
+
+  // Can't use `.forEach` on a `Nodelist` in Firefox
+  for (let i = 0; i < length; i++) {
+    let distance = distanceToTop(elements[i]);
 
     if (distance > 0 && distance < minimumNonNegativeDistanceToTop) {
       minimumNonNegativeDistanceToTop = distance;
       index = i;
     }
-  });
+  }
 
   return elements[index];
 }
@@ -54,10 +57,12 @@ function animateBackgroundDivColor() {
   setTimeout(() => { pause = false }, 1000);
 
   const divInViewport = closestToTop(backgroundDivs);
+  const length = backgroundDivs.length;
 
-  backgroundDivs.forEach(function(div) {
-    div.style.backgroundColor = '#FFFFFF';
-  });
+  // Can't use `.forEach` on a `Nodelist` in Firefox
+  for (let i = 0; i < length; i++) {
+    backgroundDivs[i].style.backgroundColor = '#FFFFFF';
+  }
 
   const newColor = pickNewColor(previousColor);
   divInViewport.style.backgroundColor = newColor;
@@ -75,9 +80,11 @@ function handleArrowKeyPress(fn) {
 }
 
 function backgroundColorAnimation() {
-  window.addEventListener('DOMContentLoaded', setTimeout(animateBackgroundDivColor, 500));
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(animateBackgroundDivColor, 500);
+  });
   window.addEventListener('mousewheel', animateBackgroundDivColor);
-  window.addEventListener('MozMousePixelScroll', animateBackgroundDivColor);
+  window.addEventListener('scroll', animateBackgroundDivColor);
   window.addEventListener('touchmove', animateBackgroundDivColor);
   window.addEventListener('keydown', handleArrowKeyPress(animateBackgroundDivColor));
 }
