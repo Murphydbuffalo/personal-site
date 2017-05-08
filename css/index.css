@@ -91,3 +91,8 @@ a:hover {
 .centered-text {
   text-align: center;
 }
+
+ul li {
+  list-style-position: outside;
+  margin-left: 1em;
+}
