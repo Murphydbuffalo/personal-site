@@ -16,3 +16,4 @@ aws s3 sync ./build s3://www.danmurphy.codes --acl public-read --exclude "*" --i
 
 # Upload remaining files (favicons) as-is.
 aws s3 sync ./build s3://www.danmurphy.codes --acl public-read --exclude "*.html" --exclude "*.css" --exclude "*.js" --exclude "images/*"
+
