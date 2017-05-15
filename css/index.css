@@ -24,6 +24,11 @@ body {
   .ninety-percent-width-at-768px {
     width: 90%;
   }
+
+  .video {
+   width: 75%;
+   max-height: 169px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -54,6 +59,10 @@ body {
 
   .sixty-percent-width-at-560px {
     width: 60%;
+  }
+
+  .video {
+    max-height: 130px;
   }
 }
 
