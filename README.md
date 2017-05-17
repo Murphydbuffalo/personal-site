@@ -1,6 +1,6 @@
-# [Dan's Personal Website](http://www.danmurphy.codes)
+# [Dan's Personal Website](https://danmurphy.codes)
 
-This is the code for my personal website, [http://www.danmurphy.codes](http://www.danmurphy.codes).
+This is the code for my personal website, [https://danmurphy.codes](https://danmurphy.codes).
 
 It's a static site hosted on an AWS S3 bucket, and distributed through the AWS Cloudfront CDN.
 
