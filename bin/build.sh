@@ -23,11 +23,15 @@ CSS_HASH=`md5 -q ./css/index.css`
 uglifyjs ./javascript/index.js --compress --mangle toplevel --output "./build/index-$JS_HASH.min.js"
 minify --output "./build/index-$CSS_HASH.min.css" ./css/normalize.css ./css/skeleton.css ./css/index.css
 
-# Update `template.html` to use the hash-based filenames for our CSS and JS manifest files.
-JS_MANIFEST=`find ./build -name "index-*.min.js" -exec basename {} \;`
-CSS_MANIFEST=`find ./build -name "index-*.min.css" -exec basename {} \;`
-sed "s/index.min.js/$JS_MANIFEST/" ./template.html > ./template_with_manifests.html
-sed -i "" "s/index.min.css/$CSS_MANIFEST/" ./template_with_manifests.html
+# Build full HTML files from `template.html` (which contains the <head> and
+# opening <html> and <body> tags) and the files in `/views`.
+#
+# Replace the CSS and JS file names in `template.html` with the hash-based filenames for our CSS and JS manifest files.
+# And write the resulting HTML to `template_with_manifests.html`.
+JS_FILENAME=`find ./build -name "index-*.min.js" -exec basename {} \;`
+CSS_FILENAME=`find ./build -name "index-*.min.css" -exec basename {} \;`
+sed "s/index.min.js/$JS_FILENAME/" ./template.html > ./template_with_manifests.html
+sed -i "" "s/index.min.css/$CSS_FILENAME/" ./template_with_manifests.html
 
 # For every file in the `/views` directory prepend the contents of `template_with_manifests.html`
 # and append the closing `</body>` and `</html>` tags, and move the resulting files
