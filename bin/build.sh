@@ -19,7 +19,7 @@ cp -R ./favicons/* ./images ./build
 # value allow browsers to avoid making requests for our JS and CSS files for up
 # to one year, so long as the contents of `index.css/js` haven't changed.
 JS_HASH=`md5 -q ./javascript/index.js`
-CSS_HASH=`md5 -q ./javascript/index.js`
+CSS_HASH=`md5 -q ./css/index.css`
 uglifyjs ./javascript/index.js --compress --mangle toplevel --output "./build/index-$JS_HASH.min.js"
 minify --output "./build/index-$CSS_HASH.min.css" ./css/normalize.css ./css/skeleton.css ./css/index.css
 
