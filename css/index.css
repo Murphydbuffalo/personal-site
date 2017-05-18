@@ -7,6 +7,10 @@ body {
   font-style: italic;
 }
 
+.quote span {
+  margin-left: -0.5em;
+}
+
 .home {
   position: fixed;
   z-index: 999;
