@@ -1,5 +1,4 @@
 .DS_Store
 build
-template_with_manifests.html
+node_modules
 google*
-
