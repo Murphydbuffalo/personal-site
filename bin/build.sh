@@ -3,6 +3,7 @@
 # Exit the script if any command within it returns with an error.
 set -e
 
+mkdir -p ./build
 rm -rf ./build/*
 cp -R ./favicons/* ./images ./build
 
