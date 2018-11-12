@@ -143,6 +143,11 @@ i {
   .card p, .card blockquote {
     padding: 0 5%;
   }
+
+  #smile-o-meter img {
+    height: 250px;
+    width: 250px;
+  }
 }
 
 @media (max-width: 500px) {
