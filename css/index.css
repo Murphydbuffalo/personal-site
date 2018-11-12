@@ -83,3 +83,60 @@ i {
 .card i {
   font-size: 1em;
 }
+
+@media (max-width: 1250px) {
+  #modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1050px) {
+  iframe {
+    width: 428.8px;
+    height: 241.2px;
+  }
+}
+
+@media (max-width: 950px) {
+  #headshot {
+    margin-left: 1rem;
+  }
+
+  #about-me {
+    margin-left: 5rem;
+  }
+
+  #about-me li {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  #modal div {
+    display: block;
+  }
+
+  #headshot {
+    text-align: center;
+    margin: 0;
+    padding-top: 2em;
+  }
+
+  #about-me {
+    text-align: center;
+    margin: 0;
+    padding: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  #headshot img {
+    height: 250px;
+    width: 250px;
+  }
+
+  iframe {
+    width: 214.4px;
+    height: 120px;
+  }
+}
