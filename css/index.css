@@ -55,6 +55,10 @@ a, a:hover {
   color: black;
 }
 
+h1 a {
+  text-decoration: none;
+}
+
 i {
   font-size: 2em;
 }
@@ -62,4 +66,8 @@ i {
 section {
   text-align: center;
   padding-bottom: 5em;
+}
+
+#recommendations h3 {
+  margin-bottom: 0.1em;
 }
