@@ -1,4 +1,59 @@
 body {
   width: 100%;
-  background-color: #F8F8F9;
+  --dark-blue: #0a4773;
+}
+
+header {
+  background-color: var(--dark-blue);
+  min-height: 500px;
+}
+
+main {
+  background-color: #F6F6F6;
+}
+
+#modal {
+  position: relative;
+  margin: auto;
+  top: 75px;
+  background: white;
+  min-height: 500px;
+  width: 85%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px lightgray;
+}
+
+#modal div {
+  display: inline-block;
+}
+
+#headshot {
+  margin: 50px 0 0 50px;
+}
+
+#headshot img {
+  border-radius: 10%;
+}
+
+#about-me {
+  margin: 13em 0 0 8em;
+  vertical-align: top;
+}
+
+#about-me ul {
+  list-style: none;
+}
+
+#about-me li {
+  display: inline-block;
+  color: black;
+  margin-left: 1rem;
+}
+
+a, a:hover {
+  color: black;
+}
+
+i {
+  font-size: 2em;
 }
