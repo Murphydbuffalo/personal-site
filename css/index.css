@@ -55,8 +55,9 @@ a, a:hover {
   color: black;
 }
 
-h1 a {
-  text-decoration: none;
+/* TODO: Use a meaningfully named class to add these styles to h3 */
+h3 {
+  margin-bottom: 0.1em;
 }
 
 i {
@@ -68,10 +69,6 @@ section {
   padding-bottom: 5em;
 }
 
-#recommendations h3 {
-  margin-bottom: 0.1em;
-}
-
 .card {
   background: white;
   padding: 2em;
@@ -80,6 +77,10 @@ section {
   box-shadow: 1px 1px 4px lightgray;
 }
 
-.card p {
-  padding: 0 15%;
+.card p, .card blockquote {
+  padding: 0 8%;
+}
+
+.card i {
+  font-size: 1em;
 }
