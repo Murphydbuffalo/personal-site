@@ -1,0 +1,16 @@
+{
+  "name": "danmurphy.codes",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murphydbuffalo/personal-site.git"
+  },
+  "author": "Dan Murphy",
+  "license": "ISC",
+  "homepage": "https://danmurphy.codes",
+  "devDependencies": {
+    "md5-file": "^4.0.0",
+    "uglifycss": "0.0.29"
+  }
+}
