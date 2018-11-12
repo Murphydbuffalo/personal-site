@@ -106,8 +106,17 @@ i {
     margin-left: 5rem;
   }
 
+
+  #about-me ul {
+    margin-left: 1rem;
+  }
+
   #about-me li {
     margin-left: 1rem;
+  }
+
+  #about-me i {
+    font-size: 1.7em;
   }
 }
 
