@@ -79,3 +79,7 @@ section {
   border-radius: 5px;
   box-shadow: 1px 1px 4px lightgray;
 }
+
+.card p {
+  padding: 0 15%;
+}
