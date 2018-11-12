@@ -136,6 +136,10 @@ i {
     margin: 0;
     padding: 3em;
   }
+
+  .card p, .card blockquote {
+    padding: 0 5%;
+  }
 }
 
 @media (max-width: 500px) {
