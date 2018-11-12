@@ -57,9 +57,17 @@ i {
   vertical-align: top;
 }
 
+#about-me h1 {
+  margin-bottom: 0.5rem;
+}
+
+#about-me .subheading {
+  text-align: center;
+  margin-left: 1.25rem;
+}
+
 #about-me ul {
   list-style: none;
-  margin-left: 1em;
 }
 
 #about-me li {
@@ -104,11 +112,6 @@ i {
 
   #about-me {
     margin-left: 5rem;
-  }
-
-
-  #about-me ul {
-    margin-left: 1rem;
   }
 
   #about-me li {
