@@ -81,12 +81,27 @@ iframe {
   margin-bottom: 0.1em;
 }
 
+#recommendations .card {
+  height: 300px;
+}
+
+#recommendation-toggle {
+  list-style: none;
+  font-size: 0.5em;
+}
+
+#recommendation-toggle li {
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
 .card {
   background: white;
   padding: 2em;
   margin: 2em 0;
   border-radius: 5px;
   box-shadow: 1px 1px 2px lightgray;
+  display: table;
 }
 
 .card:hover {
@@ -97,6 +112,15 @@ iframe {
   display: 'block';
 }
 
+.card.hidden {
+  display: none;
+}
+
+.card .vertical-align-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .card p, .card blockquote {
   padding: 0 15%;
 }
@@ -105,9 +129,19 @@ iframe {
   font-size: 1em;
 }
 
+@media (max-width: 1500px) {
+  #recommendations .card {
+    height: 375px;
+  }
+}
+
 @media (max-width: 1250px) {
   #modal {
     width: 90%;
+  }
+
+  #recommendations .card {
+    height: 450px;
   }
 }
 
@@ -120,6 +154,10 @@ iframe {
   #smile-o-meter img {
     width: 300px;
     height: 203.5px;
+  }
+
+  #recommendations .card {
+    height: 525px;
   }
 }
 
@@ -138,6 +176,10 @@ iframe {
 
   #about-me i {
     font-size: 1.7em;
+  }
+
+  #recommendations .card {
+    height: 600px;
   }
 }
 
