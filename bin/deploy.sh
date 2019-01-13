@@ -12,6 +12,7 @@ aws s3 sync ./build s3://danmurphy.codes --acl public-read \
 aws s3 sync ./build s3://danmurphy.codes --acl public-read \
                                          --exclude "*" \
                                          --include "*.css" \
+                                         --include "*.js" \
                                          --cache-control "max-age=31536000"
 
 aws s3 sync ./build s3://danmurphy.codes --acl public-read \
