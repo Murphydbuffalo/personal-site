@@ -113,6 +113,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 }
 
 .card:hover {
@@ -125,6 +126,10 @@ iframe {
 
 .card p, .card blockquote {
   padding: 0 15%;
+}
+
+.card blockquote {
+  max-height: 85%;
 }
 
 .card i {
