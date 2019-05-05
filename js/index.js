@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", function(_event) {
 
     var nextIndex;
 
-    if (event.type === 'swiped-right') {
-      if (currentIndex === 3) {
+    if (event.type === 'swiped-left') {
+      if (currentIndex === 2) {
         nextIndex = 0;
       } else {
         nextIndex = currentIndex + 1;
       }
     } else {
       if (currentIndex === 0) {
-        nextIndex = 3;
+        nextIndex = 2;
       } else {
         nextIndex = currentIndex - 1;
       }
