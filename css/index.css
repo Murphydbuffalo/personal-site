@@ -179,10 +179,6 @@ iframe {
   #about-me i {
     font-size: 1.7em;
   }
-
-  #recommendations .card {
-    height: 600px;
-  }
 }
 
 @media (max-width: 850px) {
@@ -203,7 +199,7 @@ iframe {
   }
 
   .card p, .card blockquote {
-    padding: 0 5%;
+    padding: 0;
   }
 }
 
@@ -216,10 +212,6 @@ iframe {
   iframe {
     width: 214.4px;
     height: 120px;
-  }
-
-  #recommendations .card {
-    height: 750px;
   }
 
   .card {
