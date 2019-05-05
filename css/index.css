@@ -95,13 +95,24 @@ iframe {
   margin: 0 0.2em;
 }
 
+#talks .card iframe {
+  margin-bottom: 2em;
+}
+
+#projects .card h3, #projects .card img{
+  margin-bottom: 1em;
+}
+
 .card {
   background: white;
   padding: 2em;
   margin: 2em 0;
   border-radius: 5px;
   box-shadow: 1px 1px 2px lightgray;
-  display: table;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
@@ -110,11 +121,6 @@ iframe {
 
 .card.hidden {
   display: none;
-}
-
-.card .vertical-align-wrapper {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .card p, .card blockquote {
@@ -210,5 +216,13 @@ iframe {
   iframe {
     width: 214.4px;
     height: 120px;
+  }
+
+  #recommendations .card {
+    height: 750px;
+  }
+
+  .card {
+    margin: 2em 1em;
   }
 }
