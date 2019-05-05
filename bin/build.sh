@@ -22,7 +22,7 @@ CSS_FILENAME=`find ./build -name "index-*.min.css" -exec basename {} \;`
 sed -i "" "s/index.min.css/$CSS_FILENAME/" ./build/index.html
 
 JS_HASH=`./node_modules/md5-file/cli.js ./js/index.js`
-./node_modules/uglify-js/bin/uglifyjs ./js/index.js --compress --mangle --output "./build/index-$JS_HASH.min.js"
+./node_modules/uglify-js/bin/uglifyjs ./js/index.js ./js/swiped-events.js --compress --mangle --output "./build/index-$JS_HASH.min.js"
 
 JS_FILENAME=`find ./build -name "index-*.min.js" -exec basename {} \;`
 sed -i "" "s/index.min.js/$JS_FILENAME/" ./build/index.html
