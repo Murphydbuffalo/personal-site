@@ -1,30 +1,16 @@
-document.addEventListener("DOMContentLoaded", function(_event) {
-  var recommendations = document.getElementById('recommendations');
-  var buttons         = document.querySelectorAll("#recommendation-toggle i");
-  var cards           = document.querySelectorAll("#recommendations .card");
+function addCarouselEventListeners(containerId) {
+  var section = document.getElementById(containerId);
+  var buttons = document.querySelectorAll('#' + containerId + '-carousel i');
+  var cards   = document.querySelectorAll('#' + containerId + ' .card');
 
-  var hideAllCardsAndButtons = function() {
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('fas');
-      buttons[i].classList.add('far');
+  section.addEventListener('swiped-left',  showCardViaSwipe, false);
+  section.addEventListener('swiped-right', showCardViaSwipe, false);
 
-      cards[i].classList.add('hidden');
-    }
-  }
+  buttons.forEach(function(button) {
+    button.addEventListener('click', showCardViaButtonClick, false);
+  });
 
-  var showCard = function(card) {
-    card.classList.remove('hidden');
-  }
-
-  var showButton = function(button) {
-    button.classList.add('fas');
-  }
-
-  var buttonIndex = function(button) {
-    return parseInt(button.getAttribute("data-card-index"), 10);
-  }
-
-  var showRecommendationViaButtonClick = function(event) {
+  function showCardViaButtonClick(event) {
     var clickedButton = event.currentTarget;
     var cardNumber    = buttonIndex(clickedButton);
 
@@ -33,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function(_event) {
     showCard(cards[cardNumber]);
   };
 
-  var showRecommendationFromSwipe = function(event) {
-    var currentButton = document.querySelector('#recommendation-toggle .fas');
+  function showCardViaSwipe(event) {
+    var currentButton = document.querySelector('#' + containerId + '-carousel .fas');
     var currentIndex  = buttonIndex(currentButton);
 
     var nextIndex;
@@ -53,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(_event) {
       }
     }
 
-    var nextButton = document.querySelector('#recommendation-toggle i[data-card-index="' + String(nextIndex) + '"]');
+    var nextButton = document.querySelector('#' + containerId + '-carousel i[data-card-index="' + String(nextIndex) + '"]');
     var cardNumber = buttonIndex(nextButton);
 
     hideAllCardsAndButtons();
@@ -61,10 +47,30 @@ document.addEventListener("DOMContentLoaded", function(_event) {
     showCard(cards[cardNumber]);
   }
 
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', showRecommendationViaButtonClick, false);
+  function hideAllCardsAndButtons() {
+    buttons.forEach(function(button, i) {
+      button.classList.remove('fas');
+      button.classList.add('far');
+
+      cards[i].classList.add('hidden');
+    });
   }
 
-  recommendations.addEventListener('swiped-left',  showRecommendationFromSwipe, false);
-  recommendations.addEventListener('swiped-right', showRecommendationFromSwipe, false);
+  function showCard(card) {
+    card.classList.remove('hidden');
+  }
+
+  function showButton(button) {
+    button.classList.add('fas');
+  }
+
+  function buttonIndex(button) {
+    return parseInt(button.getAttribute('data-card-index'), 10);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function(_event) {
+  document.querySelectorAll('section').forEach(function(section) {
+    addCarouselEventListeners(section.id);
+  });
 });
