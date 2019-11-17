@@ -1,29 +1,34 @@
-function addCarouselEventListeners(containerId) {
-  var section = document.getElementById(containerId);
-  var buttons = document.querySelectorAll('#' + containerId + '-carousel i');
-  var cards   = document.querySelectorAll('#' + containerId + ' .card');
+class Carousel {
+  constructor(containerId) {
+    this.containerId = containerId;
+    this.section     = document.getElementById(containerId);
+    this.buttons     = document.querySelectorAll(`#${containerId}-carousel i`);
+    this.cards       = document.querySelectorAll(`#${containerId} .card`);
+  }
 
-  section.addEventListener('swiped-left',  showCardViaSwipe, false);
-  section.addEventListener('swiped-right', showCardViaSwipe, false);
+  addEventListeners() {
+    this.section.addEventListener('swiped-left',  this.showCardViaSwipe.bind(this), false);
+    this.section.addEventListener('swiped-right', this.showCardViaSwipe.bind(this), false);
 
-  buttons.forEach(function(button) {
-    button.addEventListener('click', showCardViaButtonClick, false);
-  });
+    this.buttons.forEach((button) => {
+      button.addEventListener('click', this.showCardViaButtonClick.bind(this), false);
+    });
+  }
 
-  function showCardViaButtonClick(event) {
-    var clickedButton = event.currentTarget;
-    var cardNumber    = buttonIndex(clickedButton);
+  showCardViaButtonClick(event) {
+    const clickedButton = event.currentTarget;
+    const cardNumber    = this.buttonIndex(clickedButton);
 
-    hideAllCardsAndButtons();
-    showButton(clickedButton);
-    showCard(cards[cardNumber]);
-  };
+    this.hideAllCardsAndButtons();
+    this.showButton(clickedButton);
+    this.showCard(this.cards[cardNumber]);
+  }
 
-  function showCardViaSwipe(event) {
-    var currentButton = document.querySelector('#' + containerId + '-carousel .fas');
-    var currentIndex  = buttonIndex(currentButton);
+  showCardViaSwipe(event) {
+    const currentButton = document.querySelector(`#${this.containerId}-carousel .fas`);
+    const currentIndex  = this.buttonIndex(currentButton);
 
-    var nextIndex;
+    let nextIndex;
 
     if (event.type === 'swiped-left') {
       if (currentIndex === 2) {
@@ -39,38 +44,39 @@ function addCarouselEventListeners(containerId) {
       }
     }
 
-    var nextButton = document.querySelector('#' + containerId + '-carousel i[data-card-index="' + String(nextIndex) + '"]');
-    var cardNumber = buttonIndex(nextButton);
+    const nextButton = document.querySelector(`#${this.containerId}-carousel i[data-card-index="${String(nextIndex)}"]`);
+    const cardNumber = buttonIndex(nextButton);
+    const nextCard   = this.cards[cardNumber];
 
-    hideAllCardsAndButtons();
-    showButton(nextButton);
-    showCard(cards[cardNumber]);
+    this.hideAllCardsAndButtons();
+    this.showButton(nextButton);
+    this.showCard(nextCard);
   }
 
-  function hideAllCardsAndButtons() {
-    buttons.forEach(function(button, i) {
+  hideAllCardsAndButtons() {
+    this.buttons.forEach((button, i) => {
       button.classList.remove('fas');
       button.classList.add('far');
 
-      cards[i].classList.add('hidden');
+      this.cards[i].classList.add('hidden');
     });
   }
 
-  function showCard(card) {
+  showCard(card) {
     card.classList.remove('hidden');
   }
 
-  function showButton(button) {
+  showButton(button) {
     button.classList.add('fas');
   }
 
-  function buttonIndex(button) {
+  buttonIndex(button) {
     return parseInt(button.getAttribute('data-card-index'), 10);
   }
 }
 
 document.addEventListener('DOMContentLoaded', function(_event) {
   document.querySelectorAll('section').forEach(function(section) {
-    addCarouselEventListeners(section.id);
+    new Carousel(section.id).addEventListeners();
   });
 });
