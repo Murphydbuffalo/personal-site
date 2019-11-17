@@ -93,6 +93,10 @@ iframe {
   margin-bottom: 1em;
 }
 
+#projects .card {
+  height: 758px;
+}
+
 .card {
   background: white;
   padding: 2em;
