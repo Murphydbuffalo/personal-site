@@ -27,25 +27,26 @@ class Carousel {
   showCardViaSwipe(event) {
     const currentButton = document.querySelector(`#${this.containerId}-carousel .fas`);
     const currentIndex  = this.buttonIndex(currentButton);
+    const maxIndex      = this.buttons.length - 1;
 
     let nextIndex;
 
     if (event.type === 'swiped-left') {
-      if (currentIndex === 2) {
+      if (currentIndex === maxIndex) {
         nextIndex = 0;
       } else {
         nextIndex = currentIndex + 1;
       }
     } else {
       if (currentIndex === 0) {
-        nextIndex = 2;
+        nextIndex = maxIndex;
       } else {
         nextIndex = currentIndex - 1;
       }
     }
 
     const nextButton = document.querySelector(`#${this.containerId}-carousel i[data-card-index="${String(nextIndex)}"]`);
-    const cardNumber = buttonIndex(nextButton);
+    const cardNumber = this.buttonIndex(nextButton);
     const nextCard   = this.cards[cardNumber];
 
     this.hideAllCardsAndButtons();
